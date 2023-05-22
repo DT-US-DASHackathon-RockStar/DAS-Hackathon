@@ -1,21 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
-import { ClickAnalyticsPlugin } from '@microsoft/applicationinsights-clickanalytics-js';
 import { environment } from 'src/environments/environment';
 
-const clickPluginInstance = new ClickAnalyticsPlugin();
-// Click Analytics configuration
-const clickPluginConfig = {
-  autoCapture: true,
-};
-// Application Insights Configuration
-const configObj = {
-  connectionString: 'YOUR CONNECTION STRING',
-  extensions: [clickPluginInstance],
-  extensionConfig: {
-    [clickPluginInstance.identifier]: clickPluginConfig,
-  },
-};
 
 @Injectable()
 export class MyMonitoringService {
