@@ -1,0 +1,47 @@
+<div class="text-center login-div">
+  <main class="form-signin">
+    <form (submit)="signIn($event)">
+      <img
+        class="mb-4"
+        src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+        alt=""
+        width="72"
+        height="57"
+      />
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <div *ngIf="!isFormValid" class="my-2 text-danger">
+        Incorrect Username and Password
+      </div>
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="emailControl"
+          placeholder="name@example.com"
+          required
+        />
+        <label for="emailControl">Email address</label>
+      </div>
+      <div class="form-floating mt-2">
+        <input
+          type="password"
+          class="form-control"
+          id="passwordControl"
+          placeholder="Password"
+          required
+        />
+        <label for="passwordControl">Password</label>
+      </div>
+
+      <div class="checkbox my-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        Sign in
+      </button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2021</p>
+    </form>
+  </main>
+</div>
